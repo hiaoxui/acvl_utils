@@ -358,10 +358,10 @@ def crop_and_pad_nd(
 
 
 def insert_crop_into_image(
-        image: Union[torch.Tensor, np.ndarray],
-        crop: Union[torch.Tensor, np.ndarray],
-        bbox: List[List[int]]
-) -> Union[torch.Tensor, np.ndarray]:
+        image,
+        crop,
+        bbox
+):
     """
     Inserts a cropped patch back into the original image at the position specified by bbox.
     If the bounding box extends beyond the image boundaries, only the valid portions are inserted.
